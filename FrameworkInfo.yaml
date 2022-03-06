@@ -1,0 +1,36 @@
+Libraries Used:
+  1. Selenium - Web Automation
+  2. Appium - Mobile Automation
+  3. Rest Assured - API interactions
+  4. TestNG - Unit Testing
+  5. Extent Reports - Reporting
+  6. Lombok - Removes Boilerplates
+  7. Owner - Config File Management
+  8. Maven - Build and Dependency Management Tool
+  9. AssertJ - Fluent Assertions
+  10. Webdrivermanager - Managing browser binaries
+  11. Jackson  - Serialisation and Deserialisation
+  12. Awaitility - Async API calls 13. NoException - Custom Exception Handlers to handle checked and unchecked exception 14. Data Supplier - Customised Data Provider
+
+
+Features:
+  1. Ability to run tests in local, remote, selenoid grid
+  2. Run Android, IOS tests in local and remote (browser stack)
+  3. Clean code principles
+  4. Reporting 5. Unit tests
+  6. Integration with Jenkins
+  7. Database Integration
+  8. Code formatting
+  9. Github Action Integration (Replacing Jenkins with Github action)
+  10. Publishing results in Github pages.
+  11. Dockerise the tests and push to external docker registry with Github actions.
+  12. git-crypt secrets.
+  13. How to write proper readme file, PR templates?
+
+Rules:
+  1. Believe me that no one can write best code the first time. It involves series of refactoring.
+  2. Keep Design Principles in mind.
+  3. You might see me code something weird. It may look complex but it is not complex but just unfamiliar.
+  4. Keep maintainability in mind.
+  5. We are going to code a little, test a little.
+
