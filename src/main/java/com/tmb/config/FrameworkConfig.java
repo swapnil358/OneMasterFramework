@@ -1,10 +1,15 @@
 package com.tmb.config;
 
 import com.tmb.config.converters.StringToBrowserTypeConverter;
+import com.tmb.config.converters.StringToRemoteModeBrowserConverter;
+import com.tmb.config.converters.StringToRunModeBrowserTypeConverter;
+import com.tmb.config.converters.StringToURLConverter;
 import com.tmb.enums.BrowserRemoteModeType;
 import com.tmb.enums.BrowserType;
 import com.tmb.enums.RunModeBrowserType;
 import org.aeonbits.owner.Config;
+
+import java.net.URL;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
@@ -24,11 +29,35 @@ public interface FrameworkConfig extends Config {
     BrowserType browser();
 
 
-
     @Key("runModeBrowser")
+    @ConverterClass(StringToRunModeBrowserTypeConverter.class)
     RunModeBrowserType browserRunMode();
 
 
     @Key("browserRemoteMode")
+    @ConverterClass(StringToRemoteModeBrowserConverter.class)
     BrowserRemoteModeType browserRemoteMode();
+
+
+    @Key("runModeMobile")
+    @ConverterClass(StringToRunModeBrowserTypeConverter.class)
+    RunModeBrowserType mobileRemote();
+
+
+    @Key("mobileRemoteMode")
+    @ConverterClass("")
+    BrowserRemoteModeType mobileRemoteMode();
+
+
+    //Instead of returning as String, returning as URL so that we don't need to bother to catch the exception on caller method
+    // String seleniumGridURL();
+    @ConverterClass(StringToURLConverter.class)
+    URL seleniumGridURL();
+
+    @ConverterClass(StringToURLConverter.class)
+    URL selenoidURL();
+
+    @ConverterClass((StringToURLConverter.class))
+    @DefaultValue("http://127.0.0.1:4723/wd/hub")
+    URL localAppiumServerURL();
 }

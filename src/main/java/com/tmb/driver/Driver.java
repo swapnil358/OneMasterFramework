@@ -1,5 +1,6 @@
 package com.tmb.driver;
 
+import com.tmb.driver.factory.web.local.LocalDriverFactory;
 import org.openqa.selenium.WebDriver;
 
 public class Driver {
